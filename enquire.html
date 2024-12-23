@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: cyan;
+      }
+      h4 {
+        width: 300px;
+        animation-name: text;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        background-color: purple;
+        color: white;
+      }
+
+      #tagline {
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes text {
+        from {
+          margin-left: 30%;
+        }
+
+        to {
+          margin-left: 0%;
+        }
+      }
+      h3 {
+        margin-left: 170px;
+        background-color: purple;
+        color: white;
+        width: 350px;
+      }
+      img {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Horizontal navigation menu -->
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <div class="d-flex">
+          <img
+            src="./images/global_logo.png"
+            alt="Logo"
+            width="50px"
+            height="50px"
+            class="text-left"
+          />
+          <h2 class="text-white">Global Explorers</h2>
+        </div>
+        <form class="d-flex w-50" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search destinations"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">Explore</button>
+          
+        </form>
+      </div>
+    </nav>
+    <!-- Creating another horizontal menu to give navigation options -->
+    <nav class="nav justify-content-end bg-dark">
+      <div class="container-fluid justify-content-end">
+        <ul class="nav justiy-content-end bg-dark">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Tours</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">USA</a></li>
+              <li><a class="dropdown-item" href="#">Europe</a></li>
+              <li><a class="dropdown-item" href="#">Italy</a></li>
+              <li><a class="dropdown-item" href="#">India</a></li>
+              <li><a class="dropdown-item" href="#">South Africa</a></li>
+              <li><a class="dropdown-item" href="#">New Zealand</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Explore all</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enquire.html">Enquire Now</a>
+          </li>
+          <li class="nav-item text-right">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+    <div class="container-fluid d-flex">
+      <div class="container w-50 d-flex-column">
+        <img
+          src="images/travel.gif"
+          alt="Travel gif"
+          width="100%"
+          height="50%"
+          class="text-center justify-content-center align-items-center"
+        />
+        <h4 id="tagline">Make your journey memorable with us</h4>
+      </div>
+      <div class="container">
+        <div>
+          <h3>We will get in touch soon</h3>
+        </div>
+        <br />
+        <div class="container w-50">
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="fullName"
+                aria-describedby="Name"
+                placeholder="Enter your Name here"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll email you the iternery of the tour you are interested
+                in.</small
+              >
+            </div>
+            <br />
+            <div class="form-group w-100">
+              <input
+                type="phone"
+                class="form-control"
+                id="contactNumber"
+                placeholder="Enter your Contact number"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="exampleCheck1"
+              />
+
+              <label for="Departuredate">Select estimated departure date</label>
+            </div>
+            <br />
+            <div class="form-group">
+              <select name="tours" id="tours">
+                <option value="USA">USA</option>
+                <option value="australia">Australia</option>
+                <option value="europe">Europe</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Newzealand">New Zealand</option>
+                <option value="Greece">Greece</option>
+              </select>
+              <label for="tours"
+                >Select destination you are interested in:</label
+              >
+            </div>
+            <br />
+            <div class="form-group mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Type your message here</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="container d-flex-column w-50 justify-content-right align-items-center"
+      >
+        <img
+          src="./images/global_logo.png"
+          alt="Logo"
+          width="70%"
+          height="30%"
+          class="logoimg_right"
+        />
+        <p class="text-left justify-content-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+          voluptate? Sed voluptatem natus a nisi amet! Suscipit cumque
+          doloremque non quibusdam adipisci fugiat quos consequatur doloribus,
+          sit accusantium ratione odio.
+        </p>
+      </div>
+    </div>
+    <br>
+          <br>
+    <div id="gapdiv">
+      <br>
+        <br>
+        <br>
+      </div>
+      
+    
+    <!-- Below section to show footer  -->
+    <footer class="bg-dark text-white top-buffer">
+      <div class="container-fluid d-flex">
+        <div class="container d-flex-column w-75 justify-content-left">
+          <!-- Bootstrap grid to show contact us -->
+          <div class="row">
+            <div class="col">
+              <br>
+              <h2>Contact us</h2>
+            </div>
+          </div>
+          <!-- Section to show address -->
+          <div class="row">
+            <div class="col-2">
+              <img src="./images/mapicon.jpeg" alt="Icons" width="30%" height="50%">
+            </div>
+            <div class="col">
+              16738,loren ipsum, Lorem 45770
+            </div>
+          </div>
+          <!-- Phone number -->
+          <div class="row">
+            <div class="col-2">
+              <img src="./images/phone_icon.jpg" alt="Icons" width="30%" height="50%">
+            </div>
+            <div class="col">
+              123-782-8923
+            </div>
+          </div>
+            <!-- Email section -->
+            <div class="row">
+              <div class="col-2">
+                <img src="./images/email_icon.jpg" alt="Icons" width="30%" height="50%">
+              </div>
+              <div class="col">
+                contactme@xyz.com
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                <img src="./images/facebook.jpg" alt="Icons" width="30%" height="50%">
+              </div>
+              <div class="col">
+                contactme@xyz.com
+              </div>
+            </div>
+      </div>
+      <div class="container w-75">
+        <br>
+        <img src="./images/travel.gif" alt="gif" width="70%" height="50%">
+        <br>
+        <h4 id="tag_line">Make your journey memorable with us</h4>
+
+      </div> 
+    
+      <div class="container d-flex-column w-50 justify-content-right align-items-right">
+        <br>
+       <img src="./images/global_logo.png" alt="Company logo" width="70%" height="40%" class="center-block logoimg_right">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicinsg elit. Nostrum expedita illo earum repellat reiciendis repellendus.
+       </p>
+      </div>
+     
+    </footer>
+
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

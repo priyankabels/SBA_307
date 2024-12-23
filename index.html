@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Horizontal navigation menu -->
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <div class="d-flex">
+          <img
+            src="./images/global_logo.png"
+            alt="Logo"
+            width="50px"
+            height="50px"
+            class="text-left"
+          />
+          <h2 class="text-white">Global Explorers</h2>
+        </div>
+        <form class="d-flex w-50" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search destinations"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-info" type="submit">Explore</button>
+        </form>
+        <!-- <div class="d-flex">
+             <button type="button" class="btn btn-outline-info">Register</button>
+            <ul class="nav nav-tabs justify-content-end bg-dark">
+                <li class="nav-item">
+                  <a class="nav-link active"  href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  href="register.html">LogIn</a>
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-outline-info">LogIn</button>
+          </div> -->
+      </div>
+    </nav>
+    <!-- Creating another horizontal menu to give navigation options -->
+    <nav class="nav justify-content-end bg-dark">
+      <div class="container-fluid justify-content-end">
+        <ul class="nav justiy-content-end bg-dark">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Tours</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">USA</a></li>
+              <li><a class="dropdown-item" href="#">Europe</a></li>
+              <li><a class="dropdown-item" href="#">Italy</a></li>
+              <li><a class="dropdown-item" href="#">India</a></li>
+              <li><a class="dropdown-item" href="#">South Africa</a></li>
+              <li><a class="dropdown-item" href="#">New Zealand</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Explore all</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enquire.html">Enquire Now</a>
+          </li>
+          <li class="nav-item text-right">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Carousel to display travel destinations images -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide w-100"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./images/london.jpg"
+            width="100%"
+            height="50%"
+            class="d-block"
+            alt="Italy image"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Venice,Italy</h5>
+            <p>Our most visted destiantion</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/swiss-mountains.jpg"
+            width="100%"
+            height="50%"
+            class="d-block"
+            alt="Swiss image"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Switzerland,Europe</h5>
+            <p>Swiss Mountains</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/italy.jpg"
+            width="100%"
+            height="50%"
+            class="d-block"
+            alt="london image"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>London</h5>
+            <p>Swinging City</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Div to add search destination -->
+    <div class="container-fluid" id="search_container">
+      <br />
+      <div class="row">
+        <div class="col-sm col-3">
+          <b>Destination</b>
+        </div>
+        <div class="col-sm col-3 text-center">
+          <b> <span>CheckIn Date</span></b>
+        </div>
+        <div class="col-sm col-3">
+          <b>CheckOut Date</b>
+        </div>
+        <div class="col-sm col-3">
+          <b>Price Range</b>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search destinations"
+            aria-label="Search"
+          />
+        </div>
+        <div class="col-3 text-center">
+          <input type="date" name="date" required />
+        </div>
+        <div class="col-3">
+          <input type="date" name="date" required />
+        </div>
+        <div class="col-3">
+          <select id="value" name="price_range">
+            <option value="2000">$2000</option>
+            <option value="4000">$4000</option>
+            <option value="5000">$5000</option>
+            <option value="6000">$6000</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Best sellers card section -->
+    <div id="destinations" class="container-fluid top-buffer">
+      <h2>Best Sellers</h2>
+    </div>
+    <div class="container-fluid card_container d-flex top-buffer">
+      <br />
+      <div class="card-body">
+        <img
+          src="./images/Europe_tour.jpg"
+          alt="Europe tour"
+          width="100%"
+          height="50%"
+        />
+        <br />
+        <p></p>
+        <p><b>Glimpses of Europe</b></p>
+        <table
+          class="table table-hover table-sm table-details w-100 table-normal"
+        >
+          <tbody>
+            <tr>
+              <td>8 Days 7 Nights</td>
+            </tr>
+            <tr>
+              <td>Months: <b>April,Dec,Jan</b></td>
+            </tr>
+            <tr>
+              <td class="text-right">Starts From:<b>3999$</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="card_button" class="btn btn-outline-dark" type="button">
+          <b>View Iternary</b>
+        </button>
+        <!-- <button type="button" id="card_button" class="btn btn-primary">View Iternary</button> -->
+      </div>
+      <div class="card-body">
+        <img src="./images/Greece.jpg" alt="Greece" width="100%" height="50%" />
+        <br />
+        <p></p>
+        <p><b>Best of Greece</b></p>
+        <p></p>
+        <table
+          class="table table-hover table-sm table-details w-100 table-normal"
+        >
+          <tbody>
+            <tr>
+              <td>10 Days 9 Nights</td>
+            </tr>
+            <tr>
+              <td>Months: <b>Dec,Jan,Feb</b></td>
+            </tr>
+            <tr>
+              <td class="text-right">Starts From:<b>4999$</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="card_button" class="btn btn-outline-dark" type="button">
+          <b>View Iternary</b>
+        </button>
+      </div>
+      <div class="card-body">
+        <img
+          src="./images/Australia.jpg"
+          alt="Australia"
+          width="100%"
+          height="50%"
+        />
+
+        <br />
+        <p></p>
+        <p><b>Best of Australia</b></p>
+        <p></p>
+        <table
+          class="table table-hover table-sm table-details w-100 table-normal"
+        >
+          <tbody>
+            <tr>
+              <td>7 Days 6 Nights</td>
+            </tr>
+            <tr>
+              <td>Months: <b>June,July,August</b></td>
+            </tr>
+            <tr>
+              <td class="text-right">Starts From:<b>3999$</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="card_button" class="btn btn-outline-dark" type="button">
+          <b>View Iternary</b>
+        </button>
+      </div>
+      <div class="card-body">
+        <img
+          src="./images/Thailand.webp"
+          alt="Thailand"
+          width="100%"
+          height="50%"
+        />
+        <br />
+        <p></p>
+        <p><b>Phuket,Krabi & Bangkok</b></p>
+        <p></p>
+        <table
+          class="table table-hover table-sm table-details w-100 table-normal"
+        >
+          <tbody>
+            <tr>
+              <td>8 Days 7 Nights</td>
+            </tr>
+            <tr>
+              <td>Months: <b>April,Dec,Jan</b></td>
+            </tr>
+            <tr>
+              <td class="text-right">Starts From:<b>2999$</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="card_button" class="btn btn-outline-dark" type="button">
+          <b>View Iternary</b>
+        </button>
+      </div>
+      <br>
+      
+    <br>
+    </div>
+    <div id="gapdiv">
+    <br>
+      <br>
+      <br>
+    </div>
+    <!-- Below section to show footer  -->
+    <footer class="bg-dark text-white top-buffer">
+      <div class="container-fluid d-flex">
+        <div class="container d-flex-column w-75 justify-content-left">
+          <!-- Bootstrap grid to show contact us -->
+          <div class="row">
+            <div class="col">
+              <br>
+              <h3>Contact us</h3>
+            </div>
+          </div>
+          <!-- Section to show address -->
+          <div class="row">
+            <div class="col-2">
+              <img src="./images/mapicon.jpeg" alt="Icons" width="30%" height="50%">
+            </div>
+            <div class="col">
+              16738,loren ipsum, Lorem 45770
+            </div>
+          </div>
+          <!-- Phone number -->
+          <div class="row">
+            <div class="col-2">
+              <img src="./images/phone_icon.jpg" alt="Icons" width="30%" height="50%">
+            </div>
+            <div class="col">
+              123-782-8923
+            </div>
+          </div>
+            <!-- Email section -->
+            <div class="row">
+              <div class="col-2">
+                <img src="./images/email_icon.jpg" alt="Icons" width="30%" height="50%">
+              </div>
+              <div class="col">
+                contactme@xyz.com
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                <img src="./images/facebook.jpg" alt="Icons" width="30%" height="50%">
+              </div>
+              <div class="col">
+                contactme@xyz.com
+              </div>
+            </div>
+      </div>
+      <div class="container w-75">
+        <br>
+        <img src="./images/travel.gif" alt="gif" width="70%" height="50%">
+        <br>
+        <h4 id="tag_line">Make your journey memorable with us</h4>
+
+      </div> 
+    
+      <div class="container d-flex-column w-50 justify-content-right align-items-right">
+        <br>
+       <img src="./images/global_logo.png" alt="Company logo" width="70%" height="40%" class="center-block span-8 logoimg_right">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicinsg elit. Nostrum expedita illo earum repellat reiciendis repellendus.
+       </p>
+      </div>
+      
+    </footer>
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
